@@ -20,7 +20,13 @@ export function ThemeProvider({
   }
 
   return (
-    <NextThemesProvider {...props}>
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="light"
+      enableSystem={false}
+      disableTransitionOnChange
+      {...props}
+    >
       {children}
     </NextThemesProvider>
   );

@@ -14,7 +14,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
           Back to Home
         </Link>
       </div>
-      <main className="flex-1 flex items-center justify-center p-4">
+      <main className="flex-1 flex items-center justify-center">
         {children}
       </main>
     </div>

@@ -169,6 +169,7 @@ export const authOptions: AuthOptions = {
     },
     debug(code: string, metadata: any) {
       console.log('Auth Debug:', code, metadata);
+
     },
   },
 };

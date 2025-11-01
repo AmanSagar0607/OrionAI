@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { SessionProvider, useSession } from 'next-auth/react';
-import { MainNav } from "@/components/main-nav";
+// import { MainNav } from "@/components/main-nav";
 import { Container } from "@/components/container";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/providers";
@@ -51,13 +51,13 @@ function AuthContent({ children }: { children: React.ReactNode }) {
         <>{children}</>
       ) : (
         <>
-          <MainNav />
+          {/* <MainNav /> */}
           <main className="flex-1">
             <Container>
               {children}
             </Container>
           </main>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
       <Toaster position="top-center" richColors closeButton />

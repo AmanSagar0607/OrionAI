@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-export function Footer() {
+interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function Footer({ className, ...props }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t">
+    <footer className={cn("border-t", className)} {...props}>
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t">
+        <div className="flex flex-col md:flex-row justify-between items-center ">
           <div className="flex items-center space-x-6">
             <Link href="/" className="flex items-center space-x-2">
               <span className="font-bold text-lg bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -77,7 +79,7 @@ export function Footer() {
         </div>
         {/* Large OrienAI Title */}
         <div className="flex justify-center mt-8">
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-b from-black via-gray-600 to-gray-200 bg-clip-text text-transparent">
+          <h2 className="opacity-60 text-5xl md:text-6xl font-bold bg-gradient-to-b from-black via-gray-600 to-gray-200 bg-clip-text text-transparent">
             OrienAI
           </h2>
         </div>
